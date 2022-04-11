@@ -1,1 +1,2 @@
 W01D01 - Terminal, Git & GitHub
+Autor: Marcelo Edivan
