@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+
+<body>
+    <div id="vue-app">
+
+        <div class="container">
+            <h1>Check in</h1>
+            <hr/>
+            <div class="form-todo form-group">
+                <p>
+                    <input placeholder="Nome" type="text" name="name" v-model="name"/>
+                </p>
+                <p>
+                    <input placeholder="Email" type="text" name="mail" v-model="email"/>
+                </p>
+                <p>
+                    <input placeholder="Telefone" type="text" name="tel" v-model="tel"/>
+                </p>
+                <button v-on:click="addUser" type="submit" class="btn btn-primary">Adicionar</button>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-group-item" v-for="(user, index) in allUsers">
+                <span class="user_name">Nome: <strong>{{ user.name }}</strong></span><br/>
+                <span class="user_name">Email: <strong>{{ user.email }}</strong></span><br/>
+                <span class="user_name">Tel.: <strong>{{ user.tel }}</strong></span><br/>
+                <div>
+                    <a href="#" title="Excluir" v-on:click.prevent="removeUser(index)">Excluir</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
