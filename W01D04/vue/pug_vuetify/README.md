@@ -1,4 +1,4 @@
-# vue_cli
+# pug_vuetify
 
 ## Project setup
 ```
