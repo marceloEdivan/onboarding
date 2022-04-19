@@ -1,14 +1,18 @@
 <template lang="pug">
-ListUsers
+v-app
+  div(class="container")
+    h1 Cadastro de Ferramentas
+    v-divider
+    ListTools
 </template>
 
 <script>
-import ListUsers from './components/ListUsers.vue'
+import ListTools from './components/ListTools.vue'
 
 export default {
   name: 'App',
   components: {
-    ListUsers
+    ListTools
   }
 }
 </script>
